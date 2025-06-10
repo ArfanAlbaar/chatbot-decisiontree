@@ -7,7 +7,8 @@
       "discount": null,
       "rating": 4,
       "stock": 1,
-      "image": "./assets/products/image1.jpg"
+      "image": "./assets/products/image1.jpg",
+      "link": "https://www.instagram.com/mindtheabsurd/p/C76bXMHvc03/"
     },
     {
       "id": 2,
@@ -25,7 +26,8 @@
       "discount": null,
       "rating": 3.5,
       "stock": 1,
-      "image": "./assets/products/image3.jpg"
+      "image": "./assets/products/image3.jpg",
+      "link": "https://www.instagram.com/mindtheabsurd/p/C76bBkuvot2/"
     },
     {
       "id": 4,
@@ -34,7 +36,8 @@
       "discount": 10,
       "rating": 3,
       "stock": 1,
-      "image": "./assets/products/image4.jpg"
+      "image": "./assets/products/image4.jpg",
+      "link": "https://www.instagram.com/mindtheabsurd/p/C76aP9NPxPN/"
     },
     {
       "id": 5,
@@ -43,7 +46,8 @@
       "discount": 10,
       "rating": 4.5,
       "stock": 1,
-      "image": "./assets/products/image5.jpg"
+      "image": "./assets/products/image5.jpg",
+      "link": "https://www.instagram.com/mindtheabsurd/p/C76aEIzPhgS/"
     },
     {
       "id": 6,
@@ -52,7 +56,8 @@
       "discount": null,
       "rating": 2.5,
       "stock": 1,
-      "image": "./assets/products/image6.jpg"
+      "image": "./assets/products/image6.jpg",
+      "link": "https://www.instagram.com/mindtheabsurd/p/C76Z50KP8kY/"
     },
     {
       "id": 7,

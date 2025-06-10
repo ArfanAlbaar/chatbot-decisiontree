@@ -9,6 +9,7 @@ export default function ProductCard({
   discount,
   rating,
   stock,
+  link,
 }) {
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -44,6 +45,11 @@ export default function ProductCard({
       }
     };
   }, []);
+
+  const whatsAppNumber = "6289601054387";
+  const message = `Halo min, saya mau beli produk ini : ${link}`;
+  const encodedMessage = encodeURIComponent(message);
+  const whatsAppLink = `https://wa.me/${whatsAppNumber}?text=${encodedMessage}`;
 
   return (
     <div
@@ -99,21 +105,26 @@ export default function ProductCard({
             )}
           </div>
 
-          <button
+          <a
+            href={stock === 0 ? undefined : whatsAppLink}
             className={`btn ${
-              stock === 0 ? "btn-secondary" : "buy-button"
-            } mt-2 w-100 fw-bold py-2`}
-            disabled={stock === 0}
+              stock === 0 ? "btn-secondary disabled" : "buy-button"
+            } mt-2 w-100 fw-bold py-2 text-decoration-none`}
+            style={{ color: stock === 0 ? undefined : "inherit" }}
+            onClick={(e) => {
+              if (stock === 0) e.preventDefault();
+            }}
+            role="button"
+            aria-disabled={stock === 0}
           >
             {stock === 0 ? (
               "Stok Habis"
             ) : (
               <>
-                <i className="bi bi-cart-plus me-2"></i>
-                Beli Sekarang
+                <i className="bi bi-cart-plus me-2"></i>Beli Sekarang
               </>
             )}
-          </button>
+          </a>
         </div>
       </div>
     </div>
