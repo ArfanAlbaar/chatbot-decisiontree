@@ -1,7 +1,7 @@
 // src/components/ChatBot.jsx
 import { useState } from "react";
 import "../assets/ChatBot.css"; // custom style below
-import decisionTree from "../data/chatbotData.json";
+import decisionTree from "../data/ChatBotData.json";
 
 export default function ChatBot() {
   const [open, setOpen] = useState(false);
