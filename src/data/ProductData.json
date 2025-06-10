@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "POLHAM",
+      "price": 150000,
+      "discount": null,
+      "rating": 4,
+      "stock": 1,
+      "image": "./assets/products/image1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "HANDS CYST",
+      "price": 120000,
+      "discount": null,
+      "rating": 5,
+      "stock": 0,
+      "image": "./assets/products/image2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "USPA",
+      "price": 150000,
+      "discount": null,
+      "rating": 3.5,
+      "stock": 1,
+      "image": "./assets/products/image3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "NIKE",
+      "price": 150000,
+      "discount": 10,
+      "rating": 3,
+      "stock": 1,
+      "image": "./assets/products/image4.jpg"
+    },
+    {
+      "id": 5,
+      "name": "TOMHILL",
+      "price": 150000,
+      "discount": 10,
+      "rating": 4.5,
+      "stock": 1,
+      "image": "./assets/products/image5.jpg"
+    },
+    {
+      "id": 6,
+      "name": "DUCK HEAD",
+      "price": 125000,
+      "discount": null,
+      "rating": 2.5,
+      "stock": 1,
+      "image": "./assets/products/image6.jpg"
+    },
+    {
+      "id": 7,
+      "name": "SPLTV",
+      "price": 150000,
+      "discount": null,
+      "rating": 4.5,
+      "stock": 0,
+      "image": "./assets/products/image7.jpg"
+    }
+  ]
+}

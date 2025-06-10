@@ -1,0 +1,190 @@
+/* Base Styles */
+.product-card {
+  border-radius: 16px;
+  border: none;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+/* Animate In */
+.product-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animate Out - Much slower to prevent flickering */
+.product-card.animate-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-duration: 0.8s;
+}
+
+/* Hover effects only when visible */
+.product-card.animate-in:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Add this to prevent animation on initial load */
+.product-card:not(.animate-in):not(.animate-out) {
+  transition: none !important;
+}
+
+/* Hover Effects */
+.product-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-container {
+  height: 200px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+  background: white;
+  padding: 20px;
+  transform: scale(0.95);
+}
+
+.animate-in .product-image {
+  transform: scale(1);
+}
+
+/* Add these styles to your ProductCard.css */
+.discount-badge {
+  background: linear-gradient(135deg, #ff4d4d, #f94444);
+  color: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  z-index: 10; /* Ensure it stays above other elements */
+  transform: none !important; /* Remove any transform that might hide it */
+  opacity: 1 !important; /* Force full opacity */
+  transition: none !important; /* Remove any opacity transitions */
+}
+
+/* If you're using animations, add this */
+.animate-in .discount-badge,
+.animate-out .discount-badge {
+  animation: none !important;
+}
+
+.discount-badge,
+.soldout-badge {
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.2s;
+}
+
+.animate-in .discount-badge,
+.animate-in .soldout-badge {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.product-name {
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.animate-in .product-name {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Rating Stars Animation */
+.bi-star-fill,
+.bi-star-half,
+.bi-star {
+  transform: scale(0);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animate-in .bi-star-fill,
+.animate-in .bi-star-half,
+.animate-in .bi-star {
+  transform: scale(1);
+}
+
+/* Price Animation */
+.text-primary,
+.text-muted {
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.4s ease 0.2s;
+}
+
+.animate-in .text-primary,
+.animate-in .text-muted {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Button Animation */
+.buy-button,
+.btn-secondary {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.3s;
+}
+
+.animate-in .buy-button,
+.animate-in .btn-secondary {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Button Hover Effects */
+.buy-button {
+  background: linear-gradient(135deg, #4e73df, #224abe);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-button:hover {
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(78, 115, 223, 0.4);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.buy-button:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  animation: pulse 1.5s infinite;
+}
