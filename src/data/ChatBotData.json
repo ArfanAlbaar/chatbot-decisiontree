@@ -3,31 +3,74 @@
   "start": {
     "message": "Halo! Ada yang bisa saya bantu?",
     "options": [
-      { "label": "🤔 Apa itu Mind The Absurd?", "next": "tentang" },
+      {
+        "label": "🤔 Apa itu Mind The Absurd?",
+        "next": "tentang",
+        "keywords": ["tentang", "apa itu", "mind the absurd", "deskripsi"]
+      },
       {
         "label": "🛍️ Lihat produk unggulan!",
         "next": "produk",
-        "isEmphasized": false
+        "isEmphasized": false,
+        "keywords": [
+          "produk",
+          "barang",
+          "jualan",
+          "unggulan",
+          "katalog",
+          "lihat"
+        ]
       },
-      { "label": "🚚 Lihat Pengiriman?", "next": "pengiriman" },
-      { "label": "📏 Panduan ukuran", "next": "ukuran" },
-      { "label": "🛒 Cara pemesanan", "next": "pemesanan" },
+      {
+        "label": "🚚 Lihat Pengiriman?",
+        "next": "pengiriman",
+        "keywords": ["pengiriman", "kirim", "ongkir", "delivery", "kurir"]
+      },
+      {
+        "label": "📏 Panduan ukuran",
+        "next": "ukuran",
+        "keywords": ["ukuran", "panduan", "size", "chart", "sizing"]
+      },
+      {
+        "label": "🛒 Cara pemesanan",
+        "next": "pemesanan",
+        "keywords": ["pesan", "order", "cara", "pemesanan", "beli", "checkout"]
+      },
       {
         "label": "📞 Hubungi admin",
-        "next": "kontak"
+        "next": "kontak",
+        "keywords": ["kontak", "admin", "telepon", "whatsapp", "wa", "hubungi"]
       }
     ]
   },
   "tentang": {
     "message": "Mind The Absurd adalah toko online yang menjual produk baju thrift murah dan berkualitas. Cocok buat kamu yang suka thrifting!",
-    "options": [{ "label": "⬅ Kembali ke menu awal", "next": "start" }]
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
   },
   "produk": {
     "message": "Pilih kategori produk yang ingin kamu lihat:",
     "options": [
-      { "label": "👕 Pria", "next": "produk_pria" },
-      { "label": "👗 Wanita", "next": "produk_wanita" },
-      { "label": "⬅ Kembali", "next": "start" }
+      {
+        "label": "👕 Pria",
+        "next": "produk_pria",
+        "keywords": ["pria", "cowo", "laki"]
+      },
+      {
+        "label": "👗 Wanita",
+        "next": "produk_wanita",
+        "keywords": ["wanita", "cewe", "perempuan"]
+      },
+      {
+        "label": "⬅ Kembali",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
     ]
   },
   "produk_pria": {
@@ -37,26 +80,55 @@
       {
         "label": "🔗 Lihat Semua Produk Pria",
         "type": "external_link",
-        "url": "https://tokomu.com/produk/pria"
+        "url": "https://tokomu.com/produk/pria",
+        "keywords": ["semua", "pria", "lengkap"]
       },
-      { "label": "⬅ Kembali ke kategori produk", "next": "produk" }
+      {
+        "label": "⬅ Kembali ke kategori produk",
+        "next": "produk",
+        "keywords": ["kembali", "kategori"]
+      }
     ]
   },
   "produk_wanita": {
     "message": "Berikut link produk wanita:\nhttps://tokomu.com/produk/wanita",
-    "options": [{ "label": "⬅ Kembali ke produk", "next": "produk" }]
+    "options": [
+      {
+        "label": "⬅ Kembali ke produk",
+        "next": "produk",
+        "keywords": ["kembali", "kategori"]
+      }
+    ]
   },
   "pengiriman": {
     "message": "Kami menyediakan pengiriman ke seluruh dunia.",
-    "options": [{ "label": "⬅ Kembali ke menu awal", "next": "start" }]
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
   },
   "ukuran": {
     "message": "Panduan ukuran:\nS = 40cm\nM = 42cm\nL = 44cm\nXL = 46cm\nLihat juga tabel ukuran di halaman produk.",
-    "options": [{ "label": "⬅ Kembali ke menu awal", "next": "start" }]
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
   },
   "pemesanan": {
     "message": "Cara pemesanan:\n1. Pilih produk\n2. Klik tombol beli\n3. Nantinya akan terhubung ke WhatsApp admin kami\n4. Ikuti instruksi untuk menyelesaikan pembayaran",
-    "options": [{ "label": "⬅ Kembali ke menu awal", "next": "start" }]
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
   },
   "kontak": {
     "message": "Anda bisa menghubungi admin kami melalui WhatsApp untuk respons cepat.\nBe a Smart Buyer!",
@@ -64,24 +136,34 @@
       {
         "label": "Admin WhatsApp",
         "type": "external_link",
-        "url": "http://wa.me/+6289601054387"
+        "url": "http://wa.me/+6289601054387",
+        "keywords": ["wa", "whatsapp", "admin"]
       },
       {
         "label": "Instagram Kami",
         "type": "external_link",
-        "url": "https://instagram.com/mindtheabsurd.id"
+        "url": "https://instagram.com/mindtheabsurd.id",
+        "keywords": ["ig", "instagram"]
       },
       {
         "label": "TikTok Kami",
         "type": "external_link",
-        "url": "https://tiktok.com/@mindtheabsurd.id"
+        "url": "https://tiktok.com/@mindtheabsurd.id",
+        "keywords": ["tiktok", "tt"]
       },
-
-      { "label": "⬅ Kembali ke menu awal", "next": "start" }
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
     ]
   },
   "fallback_error": {
-    "message": "Maaf, sepertinya ada sedikit kendala atau pilihan tersebut belum tersedia. Silakan coba lagi atau kembali ke menu awal.",
-    "options": [{ "label": "⬅ Kembali ke menu awal", "next": "start" }]
+    "message": "Maaf, sepertinya saya kurang mengerti maksudmu. Mungkin kamu bisa coba salah satu pilihan di bawah ini atau ketik pertanyaan lain.",
+    "options": [
+      { "label": "🛍️ Lihat Produk", "next": "produk", "keywords": ["produk"] },
+      { "label": "🛒 Cara Pesan", "next": "pemesanan", "keywords": ["pesan"] },
+      { "label": "📞 Hubungi Admin", "next": "kontak", "keywords": ["admin"] }
+    ]
   }
 }
