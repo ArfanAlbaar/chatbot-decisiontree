@@ -22,6 +22,11 @@
         ]
       },
       {
+        "label": "💬 Lihat Testimoni Pelanggan",
+        "next": "testimoni",
+        "keywords": ["testimoni", "ulasan", "review", "kata pelanggan"]
+      },
+      {
         "label": "🚚 Lihat Pengiriman?",
         "next": "pengiriman",
         "keywords": ["pengiriman", "kirim", "ongkir", "delivery", "kurir"]
@@ -37,9 +42,19 @@
         "keywords": ["pesan", "order", "cara", "pemesanan", "beli", "checkout"]
       },
       {
+        "label": "❓ Pertanyaan Umum (FAQ)",
+        "next": "faq",
+        "keywords": ["faq", "tanya", "umum", "pertanyaan", "qna"]
+      },
+      {
         "label": "📞 Hubungi admin",
         "next": "kontak",
         "keywords": ["kontak", "admin", "telepon", "whatsapp", "wa", "hubungi"]
+      },
+      {
+        "label": "🎉 Kejutan & Info Unik",
+        "next": "info_unik",
+        "keywords": ["unik", "kejutan", "random", "lucu", "tanya iseng"]
       }
     ]
   },
@@ -130,6 +145,79 @@
       }
     ]
   },
+
+  "faq": {
+    "message": "Pilih topik pertanyaan yang ingin kamu ketahui:",
+    "options": [
+      {
+        "label": "💸 Diskon & Pembayaran",
+        "next": "faq_diskon_pembayaran",
+        "keywords": ["diskon", "promo", "gratis ongkir", "cod", "bayar"]
+      },
+      {
+        "label": "🚚 Pengiriman Indonesia",
+        "next": "faq_pengiriman",
+        "keywords": ["pengiriman", "kirim", "kurir", "resi", "berapa lama"]
+      },
+      {
+        "label": "🔄 Penukaran & Garansi",
+        "next": "faq_retur",
+        "keywords": ["retur", "tukar", "garansi", "refund", "rusak", "cacat"]
+      },
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
+  },
+
+  "faq_diskon_pembayaran": {
+    "message": "Info diskon dan pembayaran:\n\n*Bisa bayar di tempat (COD) kok, asal jangkauan kurir sampai ya. \n*Kalau beli banyak, pasti dapet diskon! \n*Ada gratis ongkir dengan minimal belanja Rp150K. \n*Untuk pelanggan setia, pasti kami kasih bonus spesial. \n*Kami punya loyalty program: kumpulin poin dari belanja, lalu tukarkan dengan diskon!",
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu FAQ",
+        "next": "faq",
+        "keywords": ["kembali", "faq"]
+      }
+    ]
+  },
+  "testimoni": {
+    "message": "Tentu! Kamu bisa cek semua testimoni dan ulasan dari pelanggan kami yang keren-keren di highlight Instagram kita ya!",
+    "options": [
+      {
+        "label": "Buka Instagram",
+        "type": "external_link",
+        "url": "https://instagram.com/mindtheabsurd/",
+        "keywords": ["instagram", "ig", "buka"]
+      },
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
+  },
+  "faq_pengiriman": {
+    "message": "Seputar pengiriman paketmu:\n\n*Semua barang ready stock, tidak pakai nunggu lama (PO). \n*Lama pengiriman tergantung kota tujuan, biasanya sekitar 2–5 hari kerja. \n*Bisa minta dikirim di hari yang sama, asal order sebelum jam 2 siang ya. \n*Kami mendukung pengiriman via JNE, J&T, SiCepat, dan lainnya. \n*Kalau pesanan belum sampai, cek resi dulu. Kalau ada kendala, kami bantu follow-up.",
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu FAQ",
+        "next": "faq",
+        "keywords": ["kembali", "faq"]
+      }
+    ]
+  },
+  "faq_retur": {
+    "message": "Kebijakan pengembalian dan garansi:\n\n*Bisa retur jika ukuran tidak muat, selama sesuai syarat & ketentuan. \n*Jika barang rusak saat sampai, bisa ditukar. Cukup kirim foto & video unboxing ya. \n*Ada garansi tukar barang maksimal 3 hari setelah paket diterima. \n*Jika kami salah kirim barang, kami akan ganti langsung. \n*Proses refund bisa dilakukan sesuai ketentuan yang berlaku.",
+    "options": [
+      {
+        "label": "⬅ Kembali ke menu FAQ",
+        "next": "faq",
+        "keywords": ["kembali", "faq"]
+      }
+    ]
+  },
   "kontak": {
     "message": "Anda bisa menghubungi admin kami melalui WhatsApp untuk respons cepat.\nBe a Smart Buyer!",
     "options": [
@@ -151,6 +239,16 @@
         "url": "https://tiktok.com/@mindtheabsurd.id",
         "keywords": ["tiktok", "tt"]
       },
+      {
+        "label": "⬅ Kembali ke menu awal",
+        "next": "start",
+        "keywords": ["kembali", "awal", "menu"]
+      }
+    ]
+  },
+  "info_unik": {
+    "message": "Penasaran sama hal-hal random? Ini jawabannya!\n\n* Baju kami bisa bikin auto glowing, apalagi kalau disenyumin crush pas makainya~\n* Belanja itu salah satu bentuk healing, lho. Jadi, baju kami bisa ngilangin galau!\n* Admin kami ramah banget! Suka ngelawak juga biar belanjamu nggak boring.",
+    "options": [
       {
         "label": "⬅ Kembali ke menu awal",
         "next": "start",
