@@ -9,19 +9,6 @@
         "keywords": ["tentang", "apa itu", "mind the absurd", "deskripsi"]
       },
       {
-        "label": "🛍️ Lihat produk unggulan!",
-        "next": "produk",
-        "isEmphasized": false,
-        "keywords": [
-          "produk",
-          "barang",
-          "jualan",
-          "unggulan",
-          "katalog",
-          "lihat"
-        ]
-      },
-      {
         "label": "💬 Lihat Testimoni Pelanggan",
         "next": "testimoni",
         "keywords": ["testimoni", "ulasan", "review", "kata pelanggan"]
@@ -68,55 +55,9 @@
       }
     ]
   },
-  "produk": {
-    "message": "Pilih kategori produk yang ingin kamu lihat:",
-    "options": [
-      {
-        "label": "👕 Pria",
-        "next": "produk_pria",
-        "keywords": ["pria", "cowo", "laki"]
-      },
-      {
-        "label": "👗 Wanita",
-        "next": "produk_wanita",
-        "keywords": ["wanita", "cewe", "perempuan"]
-      },
-      {
-        "label": "⬅ Kembali",
-        "next": "start",
-        "keywords": ["kembali", "awal", "menu"]
-      }
-    ]
-  },
-  "produk_pria": {
-    "message": "Produk pria kami selalu unik dan menarik perhatian!",
-    "image_url": "assets/products/product_pria_unggulan.jpg",
-    "options": [
-      {
-        "label": "🔗 Lihat Semua Produk Pria",
-        "type": "external_link",
-        "url": "https://tokomu.com/produk/pria",
-        "keywords": ["semua", "pria", "lengkap"]
-      },
-      {
-        "label": "⬅ Kembali ke kategori produk",
-        "next": "produk",
-        "keywords": ["kembali", "kategori"]
-      }
-    ]
-  },
-  "produk_wanita": {
-    "message": "Berikut link produk wanita:\nhttps://tokomu.com/produk/wanita",
-    "options": [
-      {
-        "label": "⬅ Kembali ke produk",
-        "next": "produk",
-        "keywords": ["kembali", "kategori"]
-      }
-    ]
-  },
+
   "pengiriman": {
-    "message": "Kami menyediakan pengiriman ke seluruh dunia.",
+    "message": "Pengiriman menggunakan Reguler (JNE/JNT) dan Sameday (Gojek/Grab).",
     "options": [
       {
         "label": "⬅ Kembali ke menu awal",
@@ -136,7 +77,7 @@
     ]
   },
   "pemesanan": {
-    "message": "Cara pemesanan:\n1. Pilih produk\n2. Klik tombol beli\n3. Nantinya akan terhubung ke WhatsApp admin kami\n4. Ikuti instruksi untuk menyelesaikan pembayaran",
+    "message": "Cara pemesanan:\n1. Pilih produk\n2. Klik tombol beli\n3. Isi Form secara lengkap\n4. Ikuti instruksi untuk menyelesaikan pembayaran",
     "options": [
       {
         "label": "⬅ Kembali ke menu awal",
@@ -162,7 +103,15 @@
       {
         "label": "🔄 Penukaran & Garansi",
         "next": "faq_retur",
-        "keywords": ["retur", "tukar", "garansi", "refund", "rusak", "cacat"]
+        "keywords": [
+          "retur",
+          "tukar",
+          "garansi",
+          "refund",
+          "rusak",
+          "cacat",
+          "return"
+        ]
       },
       {
         "label": "⬅ Kembali ke menu awal",
@@ -173,7 +122,7 @@
   },
 
   "faq_diskon_pembayaran": {
-    "message": "Info diskon dan pembayaran:\n\n*Bisa bayar di tempat (COD) kok, asal jangkauan kurir sampai ya. \n*Kalau beli banyak, pasti dapet diskon! \n*Ada gratis ongkir dengan minimal belanja Rp150K. \n*Untuk pelanggan setia, pasti kami kasih bonus spesial. \n*Kami punya loyalty program: kumpulin poin dari belanja, lalu tukarkan dengan diskon!",
+    "message": "Info diskon dan pembayaran:\n\n*Kalau beli banyak, pasti dapet diskon! \n*Ada gratis ongkir dengan minimal belanja Rp. 500K. \n*Untuk pelanggan setia, pasti kami kasih bonus spesial. \n*Kami punya loyalty program: kumpulin poin dari belanja, lalu tukarkan dengan diskon!",
     "options": [
       {
         "label": "⬅ Kembali ke menu FAQ",
@@ -199,7 +148,7 @@
     ]
   },
   "faq_pengiriman": {
-    "message": "Seputar pengiriman paketmu:\n\n*Semua barang ready stock, tidak pakai nunggu lama (PO). \n*Lama pengiriman tergantung kota tujuan, biasanya sekitar 2–5 hari kerja. \n*Bisa minta dikirim di hari yang sama, asal order sebelum jam 2 siang ya. \n*Kami mendukung pengiriman via JNE, J&T, SiCepat, dan lainnya. \n*Kalau pesanan belum sampai, cek resi dulu. Kalau ada kendala, kami bantu follow-up.",
+    "message": "Seputar pengiriman paketmu:\n\n*Semua barang ready stock, tidak pakai nunggu lama (PO). \n*Lama pengiriman tergantung kota tujuan, biasanya sekitar 2–5 hari kerja. \n*Bisa minta dikirim di hari yang sama, asal order sebelum jam 2 siang ya. \n*Kami mendukung pengiriman via JNE, J&T, Gojek, Grab.\n*Kalau pesanan belum sampai, cek resi dulu. Kalau ada kendala, kami bantu follow-up.",
     "options": [
       {
         "label": "⬅ Kembali ke menu FAQ",
@@ -209,12 +158,18 @@
     ]
   },
   "faq_retur": {
-    "message": "Kebijakan pengembalian dan garansi:\n\n*Bisa retur jika ukuran tidak muat, selama sesuai syarat & ketentuan. \n*Jika barang rusak saat sampai, bisa ditukar. Cukup kirim foto & video unboxing ya. \n*Ada garansi tukar barang maksimal 3 hari setelah paket diterima. \n*Jika kami salah kirim barang, kami akan ganti langsung. \n*Proses refund bisa dilakukan sesuai ketentuan yang berlaku.",
+    "message": "Kebijakan pengembalian dan garansi:\n\n*Bisa retur jika ukuran tidak muat, selama sesuai syarat & ketentuan. \n*Jika barang rusak saat sampai, bisa ditukar. Cukup kirim foto & video unboxing ya. \n*Ada garansi tukar barang maksimal 3 hari setelah paket diterima. \n*Jika kami salah kirim barang, kami akan ganti langsung. \n*Proses refund bisa dilakukan sesuai ketentuan yang berlaku. \nIsi Form Retur: http://localhost:5173/return",
     "options": [
       {
         "label": "⬅ Kembali ke menu FAQ",
         "next": "faq",
         "keywords": ["kembali", "faq"]
+      },
+      {
+        "label": "Buka Form Retur",
+        "type": "external_link",
+        "url": "http://localhost:5173/return",
+        "keywords": ["return", "return", "pengembalian"]
       }
     ]
   },
@@ -261,7 +216,7 @@
     "options": [
       { "label": "🛍️ Lihat Produk", "next": "produk", "keywords": ["produk"] },
       { "label": "🛒 Cara Pesan", "next": "pemesanan", "keywords": ["pesan"] },
-      { "label": "📞 Hubungi Admin", "next": "kontak", "keywords": ["admin"] }
+      { "label": "🔃 Retur Barang", "next": "faq_retur", "keywords": ["retur"] }
     ]
   }
 }

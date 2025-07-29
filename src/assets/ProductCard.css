@@ -122,15 +122,15 @@
 }
 
 /* Price Animation */
-.text-primary,
-.text-muted {
+.product-card .text-primary,
+.product-card .text-muted {
   transform: translateY(10px);
   opacity: 0;
   transition: all 0.4s ease 0.2s;
 }
 
-.animate-in .text-primary,
-.animate-in .text-muted {
+.product-card.animate-in .text-primary,
+.product-card.animate-in .text-muted {
   transform: translateY(0);
   opacity: 1;
 }

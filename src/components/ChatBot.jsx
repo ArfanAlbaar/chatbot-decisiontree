@@ -1,6 +1,7 @@
 // src/components/ChatBot.jsx
 import Fuse from "fuse.js"; // Import Fuse.js
 import { useEffect, useRef, useState } from "react";
+import { recordChat } from "../api";
 import "../assets/ChatBot.css";
 import decisionTree from "../data/ChatBotData.json";
 
@@ -122,6 +123,11 @@ export default function ChatBot() {
       setTimeout(() => setMessages((prev) => [...prev, botResponse]), 500);
     } else {
       // If no good match, trigger the improved fallback node
+      recordChat({ chat: userInput }).catch((err) => {
+        // Optional: log error if recording fails, but don't block the user.
+        console.error("Failed to record chat:", err);
+      });
+
       const fallbackNode = decisionTree[decisionTree.default_fallback_node_key];
       const botResponse = {
         sender: "bot",
