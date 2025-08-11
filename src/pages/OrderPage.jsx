@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { createOrder, getProductById } from "../api";
 
@@ -25,6 +25,8 @@ export default function OrderPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState(null);
+  const [submitSuccess, setSubmitSuccess] = useState("");
+  const paymentProofInputRef = useRef(null);
 
   // Efek untuk menyesuaikan ongkos kirim berdasarkan metode pengiriman
   useEffect(() => {
@@ -75,6 +77,7 @@ export default function OrderPage() {
 
     setIsSubmitting(true);
     setSubmitError(null);
+    setSubmitSuccess("");
 
     // Membuat objek FormData untuk mengirim file dan data teks
     const formData = new FormData();
@@ -97,10 +100,26 @@ export default function OrderPage() {
 
     try {
       const response = await createOrder(formData);
-      console.log("Order created:", response.data);
-      alert("Pesanan Anda berhasil dibuat!");
-      // Redirect ke halaman sukses atau halaman utama setelah berhasil
-      navigate("/");
+      // Asumsi respons dari API memiliki struktur: { data: { order_number: "..." } }
+      const orderNumber = response.data?.data?.order_number;
+
+      if (orderNumber) {
+        setSubmitSuccess(
+          `Pesanan Anda berhasil dibuat! Nomor Pesanan: ${orderNumber}`
+        );
+      } else {
+        setSubmitSuccess("Pesanan Anda berhasil dibuat!");
+      }
+      // Reset form setelah berhasil
+      setQuantity(1);
+      setCustomerName("");
+      setPhoneNumber("");
+      setAddress("");
+      setNotes("");
+      setPaymentProof(null);
+      if (paymentProofInputRef.current) {
+        paymentProofInputRef.current.value = null;
+      }
     } catch (err) {
       console.error("Failed to create order:", err.response?.data);
       setSubmitError("Gagal mengirim pesanan. Silakan coba lagi.");
@@ -128,6 +147,9 @@ export default function OrderPage() {
       <h2>Form Pemesanan</h2>
       <hr />
       <form onSubmit={handleSubmit}>
+        {submitSuccess && (
+          <div className="alert alert-success mb-3">{submitSuccess}</div>
+        )}
         {submitError && (
           <div className="alert alert-danger mb-3">{submitError}</div>
         )}
@@ -314,6 +336,7 @@ export default function OrderPage() {
                     className="form-control mb-3"
                     id="paymentProof"
                     onChange={handleFileChange}
+                    ref={paymentProofInputRef}
                     required
                   />
 

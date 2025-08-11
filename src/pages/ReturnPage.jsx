@@ -14,6 +14,8 @@ export default function ReturnPage() {
     notes: "",
   });
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function handleChange(e) {
     const { name, value, files } = e.target;
@@ -26,6 +28,8 @@ export default function ReturnPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
     const data = new FormData();
     Object.entries(form).forEach(([key, value]) => {
@@ -33,8 +37,17 @@ export default function ReturnPage() {
     });
 
     try {
-      await createReturn(data);
-      alert("Pengajuan retur berhasil dikirim!");
+      const response = await createReturn(data);
+      // Asumsi respons API: { data: { return_code: "..." } }
+      const returnCode = response.data?.data?.return_code;
+
+      if (returnCode) {
+        setSuccessMessage(
+          `Pengajuan retur berhasil dikirim! Kode Retur Anda: ${returnCode}`
+        );
+      } else {
+        setSuccessMessage("Pengajuan retur berhasil dikirim!");
+      }
       setForm({
         order_number: "",
         return_reason: "",
@@ -46,8 +59,11 @@ export default function ReturnPage() {
         resi: "",
         notes: "",
       });
-    } catch {
-      alert("Gagal mengirim data retur.");
+    } catch (err) {
+      setErrorMessage(
+        err.response?.data?.message ||
+          "Gagal mengirim data retur. Silakan coba lagi."
+      );
     }
     setLoading(false);
   }
@@ -56,6 +72,12 @@ export default function ReturnPage() {
     <div className="container py-4" style={{ maxWidth: 600 }}>
       <h2 className="mb-4">Formulir Pengajuan Retur Barang</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
+        {successMessage && (
+          <div className="alert alert-success">{successMessage}</div>
+        )}
+        {errorMessage && (
+          <div className="alert alert-danger">{errorMessage}</div>
+        )}
         <div className="mb-3">
           <label className="form-label">Nomor Pesanan*</label>
           <input
