@@ -158,7 +158,7 @@
     ]
   },
   "faq_retur": {
-    "message": "Kebijakan pengembalian dan garansi:\n\n*Bisa retur jika ukuran tidak muat, selama sesuai syarat & ketentuan. \n*Jika barang rusak saat sampai, bisa ditukar. Cukup kirim foto & video unboxing ya. \n*Ada garansi tukar barang maksimal 3 hari setelah paket diterima. \n*Jika kami salah kirim barang, kami akan ganti langsung. \n*Proses refund bisa dilakukan sesuai ketentuan yang berlaku. \nIsi Form Retur: http://localhost:5173/return",
+    "message": "Kebijakan pengembalian dan garansi:\n\n*Bisa retur jika ukuran tidak muat, selama sesuai syarat & ketentuan. \n*Jika barang rusak saat sampai, bisa ditukar. Cukup kirim foto & video unboxing ya. \n*Ada garansi tukar barang maksimal 3 hari setelah paket diterima. \n*Jika kami salah kirim barang, kami akan ganti langsung. \n*Proses refund bisa dilakukan sesuai ketentuan yang berlaku. \nIsi Form Retur: https://absurdstore.web.id/return",
     "options": [
       {
         "label": "⬅ Kembali ke menu FAQ",
@@ -168,7 +168,7 @@
       {
         "label": "Buka Form Retur",
         "type": "external_link",
-        "url": "http://localhost:5173/return",
+        "url": "https://absurdstore.web.id/return",
         "keywords": ["return", "return", "pengembalian"]
       }
     ]

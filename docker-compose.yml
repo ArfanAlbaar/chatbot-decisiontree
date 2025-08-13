@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  chatbot:
+    image: chatbot_img
+    container_name: chatbot_con
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8099:80"
+    restart: always
